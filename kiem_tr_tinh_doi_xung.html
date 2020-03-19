@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    
+    function isPalindrome(arr) {
+        if (arr.length <= 1) {
+            return true;
+        }
+        let firstCha=arr[0];
+        let lastCha=arr[arr.length-1];
+        if (firstCha !== lastCha) {
+
+            return false;
+        }else {
+            arr.shift();
+            arr.pop();
+            return isPalindrome(arr);
+        }
+    }
+
+    let str="redd7er";
+
+    arr1=str.split("");
+    let result=isPalindrome(arr1);
+    document.write(result);
+    
+</script>
+</html>
